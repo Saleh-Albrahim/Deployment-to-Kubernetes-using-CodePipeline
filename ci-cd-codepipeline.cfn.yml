@@ -9,7 +9,7 @@ Parameters:
   EksClusterName:
     Type: String
     Description: The name of the EKS cluster created
-    Default: 
+    Default: simple-jwt-api
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
@@ -17,7 +17,7 @@ Parameters:
   GitSourceRepo:
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default: 
+    Default: https://github.com/Saleh-Albrahim/Deployment-to-Kubernetes-using-CodePipeline.git
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
@@ -36,11 +36,12 @@ Parameters:
     Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
     MinLength: 3
     MaxLength: 100
+    Default: f0a4e36cb82191111d527694770819579886daec
     ConstraintDescription: You must enter a GitHub personal access token
 
   GitHubUser:
     Type: String
-    Default:
+    Default: Saleh-Albrahim
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
@@ -56,7 +57,7 @@ Parameters:
 
   KubectlRoleName:
     Type: String
-    Default: 
+    Default: UdacityFlaskDeployCBKubectlRole
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
