@@ -35,7 +35,7 @@ phases:
       - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
       - aws eks update-kubeconfig --region eu-west-1 --name $EKS_CLUSTER_NAME
       - kubectl apply -f simple_jwt_api.yml
-      - printf '[{"name":"eksctl-simple-jwt-api-cluster","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
+      - printf '[{"name":"simple-jwt-api","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
       - pwd
       - ls
 artifacts:
