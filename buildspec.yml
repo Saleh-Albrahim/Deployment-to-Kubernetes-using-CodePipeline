@@ -2,8 +2,8 @@
 version: 0.2
 
 env:
-    parameter-store:         
-      JWT_SECRET: Saleh7540
+  parameter-store:         
+    JWT_SECRET: Saleh7540
 
 phases:
   install:
