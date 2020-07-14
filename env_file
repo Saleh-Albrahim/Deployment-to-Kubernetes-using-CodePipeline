@@ -1,2 +1,2 @@
-JWT_SECRET=myjwtsecret
+JWT_SECRET=saleh7540
 LOG_LEVEL=DEBUG
